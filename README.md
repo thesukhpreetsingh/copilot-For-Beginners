@@ -60,4 +60,24 @@ ollama pull qwen2.5-coder:7b
 * Share your hardware specifications to ChatGPT.
 * Purpose you want to use for like **`I do coding and a lot of brainstorming`** so I was recommended to use **QWEN 2.5**  (7B or 14B version) or **QWEN 3** for better Brainstorming regarding Architectural designs locally. But as I love doing a lot of R AND D, my chrome has a lot of tabs opened + VS Code +  docker so my RAM is consumed so less RAM is available some time.
 
-SO I went with QWEN2.5 with 7b
+SO I went with **QWEN2.5 with 7b***. I believe this should be more than enough for me for now. 
+
+Once you do that it will show something like
+```
+> ollama pull qwen2.5-coder:7b           
+> pulling manifest 
+> pulling 60e05f210007:  13% ▕███████                       ▏ 601 MB/4.7 GB   38 MB/s   1m44s
+```
+
+once done 
+```
+> pulling manifest 
+> pulling 60e05f210007: 100%   ████████████████████████████████████████████████████████▏4GB
+> pulling 66b9ea09bd5b: 100% ▕████████████████████████████████████████████████████████▏68
+> pulling 1e65450c3067: 100% ▕████████████████████████████████████████████████████████▏1.6 KB
+> pulling 832dd9e00a68: 100% ▕████████████████████████████████████████████████████████▏11 KB
+> pulling d9bb33f27869: 100% ▕████████████████████████████████████████████████████████▏487 B
+> verifying sha256 digest 
+> writing manifest 
+> success 
+```
