@@ -1,4 +1,4 @@
-# Today I am setting up copilot locally with VS code and selective model.
+# Setting up copilot locally with VS code and selective model.
 
 ## **You ask what is COPILOT?**
 
@@ -138,3 +138,5 @@ It will start some processing and will host.
 * [Ollama Github](https://github.com/ollama/ollama)
 * [Youtube Tutorial to Download Ollama and use a model](https://www.youtube.com/watch?v=z7fhyKBAfzE)
 * To search for different models and to search through them [Ollama](https://ollama.com/search?q=qwen)
+
+##### There can be multiple alternatives to models and Code helper agents. Like we can use Copilot or Continue (Continue is the actual name) extension.
