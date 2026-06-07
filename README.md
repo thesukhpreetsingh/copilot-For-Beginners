@@ -132,4 +132,9 @@ It will start some processing and will host.
 
 
 
-##### Please Note :  I ran these command in VS Code
+##### Please Note :  I ran these command in VS Code Terminal
+
+## Links you can follow to learn more
+* [Ollama Github](https://github.com/ollama/ollama)
+* [Youtube Tutorial to Download Ollama and use a model](https://www.youtube.com/watch?v=z7fhyKBAfzE)
+* To search for different models and to search through them [Ollama](https://ollama.com/search?q=qwen)
