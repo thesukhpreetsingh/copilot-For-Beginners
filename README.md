@@ -2,21 +2,23 @@
 
 ## **You ask what is COPILOT?**
 
-Microsoft Copilot is an AI-powered assistant and chatbot developed by Microsoft. Designed to boost productivity, it answers questions, summarizes documents, writes text (like emails and code), generates images, and automates repetitive tasks. It uses advanced machine learning and natural language processing to assist you.
+Github Copilot is an AI-powered assistant and chatbot developed by Microsoft. Designed to boost productivity, it answers questions, summarizes documents, writes text (like emails and code), generates images, and automates repetitive tasks. It uses advanced machine learning and natural language processing to assist you.
 
 Copilot in organization based system is already set up. It connects to a pre-configured cloud server with a menu of models built-in
 
 
 So the best way to do and try everything on your local system is to - 
 ```
-# install Copilot on VS Code through extensions.
-# use and install any open-weights or open-source AI model locally in Visual Studio Code.
+# Install Copilot on VS Code through extensions.
+# Use and install any open-weights or open-source AI model locally in Visual Studio Code.
 # Because the models run entirely on your computer's hardware, your usage is 100% free and unlimited,
+# so Running local models through Ollama does not incur API costs.
+However, it consumes your own CPU, GPU, RAM, storage and electricity.
 # with no monthly prompt quotas or credit limits.
 ```
 
 To do this, you will need to install a local AI extension in VS Code and a local model runner on your machine.Popular Local Models You Can Install for your setup depends on your computer's RAM and graphics card (VRAM).
-* **`Qwen2.5-Coder (1.5B, 7B, or 32B):`** _Currently considered the gold standard for local coding. The 7B version strikes the best balance between speed and logic for most modern laptops._
+* **`Qwen2.5-Coder (1.5B, 7B, or 32B):`** _Qwen2.5-Coder is one of the strongest open-weight coding models available locally._
 
 * **`DeepSeek-Coder-V2 (16B or 236B):`** _Highly advanced for complex coding tasks, but requires a powerful machine with a lot of VRAM to run efficiently._
 
@@ -24,6 +26,16 @@ To do this, you will need to install a local AI extension in VS Code and a local
 
 * **`Codellama (7B or 13B):`** _An older but stable code-focused model from Meta._
 * **`Phi-4 or Phi-3.5-mini (3.8B):`** _Microsoft’s lightweight models. They are incredibly fast and ideal for older computers or laptops without dedicated graphics cards._
+
+## But Before We dive into further steps, lets understand __`Copilot vs Ollama vs Continue`__
+| Tool  | Purpose | Runs Models? |Coding Focus?
+| ------------- |:-------------:|:-------------:|:-------------:|
+|Github Copilot| AI Coding Assistant inside VS Code| No | Yes
+|Microsoft Copilot| General AI Assistant Like ChatGPT| No | Partial 
+|Continue | VS Code extension (Github Copilot also available as VS extension)| No | Yes
+|Llama| Model Runner | Yes | No|
+|Qwen/ Lama/ Gemma/ Phi|Actual AI Models|Runs by model Runners|Depends
+
 
 
 ## _**To download and run these models on your hard drive, you need a background engine. The easiest and most popular choice is Ollama**_
@@ -58,7 +70,11 @@ Now that you've installed the engine, you can download and pull any engine respe
 | 1.5B to 4B (e.g., Phi-4, Qwen 1.5B)| 8 GB RAM|Standard laptops, older computers, ultra-fast autocomplete.|
 | 7B to 8B (e.g., Qwen 7B, Llama 8B)| 16 GB RAM (or 8GB VRAM)     |Modern Macbooks (M1/M2/M3) and PCs with dedicated GPUs.|
 | 14B to 32B (e.g., Qwen 32B) | 32 GB RAM (or 16GB VRAM) |High-end workstation PCs or Mac Studios.|
-##### Here B stands for Billion of tokens that these models are trained on 
+##### Here B stands for B stands for Billion Parameters.
+For example:
+7B = 7 Billion Parameters
+14B = 14 Billion Parameters
+32B = 32 Billion Parameters 
 
 ## Step 2: Tell your computer to download the models
 Run the following caommand on command shell
@@ -144,6 +160,6 @@ It will start some processing and will host.
 
 
 ### Important Note
-* I switched to [QWEN Model 3.5:9b.](https://ollama.com/library/qwen3.5). I found it to be better. DO suggest if you found something better.
+* I switched to [QWEN Model 3.5:9b.](https://ollama.com/library/qwen3.5). I found it to be better. Do suggest if you found something better.
 * I had to increase the context size of my Ollama. To do so Open ollama GUI Client **=>** `Go to Settings` **=>** Scroll to bottom and look for **`Context Length Settings`**.
 * Change it to your preference. I choose it to be 64K.
