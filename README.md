@@ -2,18 +2,18 @@
 
 ## **You ask what is COPILOT?**
 
-Github Copilot is an AI-powered assistant and chatbot developed by Microsoft. Designed to boost productivity, it answers questions, summarizes documents, writes text (like emails and code), generates images, and automates repetitive tasks. It uses advanced machine learning and natural language processing to assist you.
+GitHub Copilot is an AI coding assistant developed by GitHub in collaboration with OpenAI and now supports multiple model providers. Designed to boost productivity, it answers questions, summarizes documents, writes text (like emails and code), generates images, and automates repetitive tasks. It uses advanced machine learning and natural language processing to assist you.
 
 Copilot in organization based system is already set up. It connects to a pre-configured cloud server with a menu of models built-in
 
 
 So the best way to do and try everything on your local system is to - 
 ```
-# Install Copilot on VS Code through extensions.
+# Install Github Copilot on VS Code through extensions.
 # Use and install any open-weights or open-source AI model locally in Visual Studio Code.
-# Because the models run entirely on your computer's hardware, your usage is 100% free and unlimited,
-# so Running local models through Ollama does not incur API costs.
-However, it consumes your own CPU, GPU, RAM, storage and electricity.
+# Because the models run entirely on your computer's hardware, your usage is 100% free and unlimited.
+# So Running local models through Ollama does not incur API costs.
+# However, it consumes your own CPU, GPU, RAM, storage and electricity.
 # with no monthly prompt quotas or credit limits.
 ```
 
@@ -27,15 +27,26 @@ To do this, you will need to install a local AI extension in VS Code and a local
 * **`Codellama (7B or 13B):`** _An older but stable code-focused model from Meta._
 * **`Phi-4 or Phi-3.5-mini (3.8B):`** _Microsoft’s lightweight models. They are incredibly fast and ideal for older computers or laptops without dedicated graphics cards._
 
-## But Before We dive into further steps, lets understand __`Copilot vs Ollama vs Continue`__
+## But before We dive into further steps, let's understand __`Copilot vs Ollama vs Continue`__
 | Tool  | Purpose | Runs Models? |Coding Focus?
 | ------------- |:-------------:|:-------------:|:-------------:|
 |Github Copilot| AI Coding Assistant inside VS Code| No | Yes
 |Microsoft Copilot| General AI Assistant Like ChatGPT| No | Partial 
 |Continue | VS Code extension (Github Copilot also available as VS extension)| No | Yes
-|Llama| Model Runner | Yes | No|
+|Ollama| Model Runner | Yes | No|
 |Qwen/ Lama/ Gemma/ Phi|Actual AI Models|Runs by model Runners|Depends
 
+## Basic Architecture
+```
+VS Code (IDE)
+   |
+GitHub Copilot / Continue (IDE Extensions)
+   |
+Ollama (Model Runner)
+   |
+Qwen / Llama / Gemma / Phi (Models)
+```
+##### Now that we understand some basics and a bit about the architecture/ workflow lets proceed.
 
 
 ## _**To download and run these models on your hard drive, you need a background engine. The easiest and most popular choice is Ollama**_
@@ -51,7 +62,7 @@ To do this, you will need to install a local AI extension in VS Code and a local
 ## Step 1: Install the Local Model Runner/ Engine (Backend)
 
 Download and install Ollama. Open your computer's Terminal (macOS/Linux) or Command Prompt (Windows).
-Run the following following command.
+Run the following command.
 ```
 irm https://ollama.com/install.ps1 | iex
 ```
@@ -85,7 +96,7 @@ ollama pull qwen2.5-coder:7b
 * Share your hardware specifications to ChatGPT.
 * Purpose you want to use for like **`I do coding and a lot of brainstorming`** so I was recommended to use **QWEN 2.5**  (7B or 14B version) or **QWEN 3** for better Brainstorming regarding Architectural designs locally. But as I love doing a lot of R AND D, my chrome has a lot of tabs opened + VS Code +  docker so my RAM is consumed so less RAM is available some time.
 
-So I went with **QWEN2.5 with 7b***. I believe this should be more than enough for me for now. 
+So I went with **Qwen2.5-Coder 7B***. I believe this should be more than enough for me for now. 
 
 Once you do that it will show something like
 ```
@@ -107,8 +118,8 @@ once done
 > success 
 ```
 
-### Some Open models which you can use, with their their purpose.
-|Use Case |Recommended Model|
+### Some Open models which you can choose from, with their purpose.
+|Use Case |Recommended Model/ How you can choose models|
 |:------|:------|
 |Qwen3	|   Coding + reasoning|
 |Qwen2.5-Coder |Coding |
@@ -117,6 +128,8 @@ once done
 |Phi-4 | Small laptops- Match and Logics |
 |DeepSeek R1 |Reasoning|
 |Mistral Small | Fast local inference|
+##### Note: These are popular community choices at the time of writing. And as you know AI Space evolves rapidly so feel free to refer to any models of your choice at the time of implementing or experimenting.
+
 ## Step 3 A: Test Run your model using Ollama (interactive mode)
 
 Run the following command on your command shell
@@ -136,21 +149,22 @@ or
 ```
 
 Or to completely stop it
-Head to your task Bar on you screen round the clock, 
+Head to your task Bar on your screen round the clock, 
 
 **Check for `Ollama icon` => `Right Click on it` => `Press Exit`**
 
-## Step 3 B: Now Serve it
+## Step 3 B: Now Serve it / On Wndows it directly starts usually. If not use following command
 ```
 Ollama server
 ```
-It will start some processing and will host.
+It will start after some processing. Ensure the Ollama service is running.
+If needed, start Ollama from the system tray or launch it manually. like shared above.
 
 ## Step 4: Add the model to your Copilot Settings.
 * Open your VS Code
 * Press and hold **`ctrl + alt + I`** to open chat
 * Chat window will open to your right. Click on Auto Setting in bottom of that panel.
-* Click on **`Settings icon just right to Other Models option`**. On Howering on Settings icon it shows a tool tip as *Manage other models*
+* Click on **`Settings icon just right to Other Models option`**. On Hovering on Settings icon it shows a tool tip as *Manage other models*
 * A pop up will open. Click on **`Add models`** = >  **`Select Ollama`** = > **Press Enter**
 * It will show something as  **`http://localhost:11434`** => **Press Enter**
 * Close the pop up.
@@ -176,3 +190,4 @@ It will start some processing and will host.
 * Change it to your preference. I choose it to be 64K.
 * Always compare the latest benchmarks, hardware requirements, and your specific use case before choosing a model.
 * Ollama and the models you choose runs using your own systems hardware.
+* Many popular AI models are open-weight but not fully open-source.
