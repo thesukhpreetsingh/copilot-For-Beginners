@@ -45,7 +45,7 @@ To do this, you will need to install a local AI extension in VS Code and a local
 > Open VS Code
 > Click on extensions icon on left bar of your VS Code
 > Search for Copilot. Make sure you are installing the one from the publisher named "Github"
-> Restart your Copilot onece
+> Restart your Copilot once
 ```
 
 ## Step 1: Install the Local Model Runner/ Engine (Backend)
@@ -106,6 +106,17 @@ once done
 > writing manifest 
 > success 
 ```
+
+### Some Open models which you can use, with their their purpose.
+|Use Case |Recommended Model|
+|:------|:------|
+|Qwen3	|   Coding + reasoning|
+|Qwen2.5-Coder |Coding |
+|Gemma 3 |Lightweight assistant |
+|Llama 3.3 |General purpose And RAG|
+|Phi-4 | Small laptops- Match and Logics |
+|DeepSeek R1 |Reasoning|
+|Mistral Small | Fast local inference|
 ## Step 3 A: Test Run your model using Ollama (interactive mode)
 
 Run the following command on your command shell
@@ -135,7 +146,7 @@ Ollama server
 ```
 It will start some processing and will host.
 
-## Step 4: Add the model to you Copilot Settings.
+## Step 4: Add the model to your Copilot Settings.
 * Open your VS Code
 * Press and hold **`ctrl + alt + I`** to open chat
 * Chat window will open to your right. Click on Auto Setting in bottom of that panel.
@@ -152,14 +163,16 @@ It will start some processing and will host.
 
 ### Links you can follow to learn more
 * To search for different models and to search through them [Ollama](https://ollama.com/search?q=qwen)
-* Ollama Git hub repositary = > [Ollama Github](https://github.com/ollama/ollama)
+* Ollama Git hub repository = > [Ollama Github](https://github.com/ollama/ollama)
 * Youtube Tutorial to [Download Ollama and use a model with it](https://www.youtube.com/watch?v=z7fhyKBAfzE)
 
 
-##### There can be multiple alternatives to models and Code helper agents. Like we can use Copilot or Continue (Continue is the actual name) extension.
+##### There can be multiple alternatives to both the models and Code helping tools and agents. Like we can use Copilot or Continue (Continue is the actual name) extension with VS Code or any other IDE.
 
 
 ### Important Note
 * I switched to [QWEN Model 3.5:9b.](https://ollama.com/library/qwen3.5). I found it to be better. Do suggest if you found something better.
 * I had to increase the context size of my Ollama. To do so Open ollama GUI Client **=>** `Go to Settings` **=>** Scroll to bottom and look for **`Context Length Settings`**.
 * Change it to your preference. I choose it to be 64K.
+* Always compare the latest benchmarks, hardware requirements, and your specific use case before choosing a model.
+* Ollama and the models you choose runs using your own systems hardware.
