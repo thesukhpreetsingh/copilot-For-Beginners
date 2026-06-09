@@ -186,7 +186,17 @@ If needed, start Ollama from the system tray or launch it manually. like shared 
 
 ### Important Note
 * I switched to [QWEN Model 3.5:9b.](https://ollama.com/library/qwen3.5). I found it to be better. Do suggest if you found something better.
-* I had to increase the context size of my Ollama. To do so Open ollama GUI Client **=>** `Go to Settings` **=>** Scroll to bottom and look for **`Context Length Settings`**.
+* I had to increase the context size of my Ollama. To do so Open ollama GUI Client **=>** `Go to Settings` **=>** Scroll to bottom and look for **`Context Length Settings`**. 
+```
+You Ask what Context Length is ?
+Context Length determines how much information the model can remember within a conversation.
+Larger context allows:
+- Larger code files
+- Longer chats
+- Bigger documentation
+
+Increasing it may increase RAM usage.
+```
 * Change it to your preference. I choose it to be 64K.
 * Always compare the latest benchmarks, hardware requirements, and your specific use case before choosing a model.
 * Ollama and the models you choose runs using your own systems hardware.
