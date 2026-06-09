@@ -131,12 +131,19 @@ It will start some processing and will host.
 
 
 
-
+## Notes
 ##### Please Note :  I ran these command in VS Code Terminal
 
-## Links you can follow to learn more
-* [Ollama Github](https://github.com/ollama/ollama)
-* [Youtube Tutorial to Download Ollama and use a model](https://www.youtube.com/watch?v=z7fhyKBAfzE)
+### Links you can follow to learn more
 * To search for different models and to search through them [Ollama](https://ollama.com/search?q=qwen)
+* Ollama Git hub repositary = > [Ollama Github](https://github.com/ollama/ollama)
+* Youtube Tutorial to [Download Ollama and use a model with it](https://www.youtube.com/watch?v=z7fhyKBAfzE)
+
 
 ##### There can be multiple alternatives to models and Code helper agents. Like we can use Copilot or Continue (Continue is the actual name) extension.
+
+
+### Important Note
+* I switched to [QWEN Model 3.5:9b.](https://ollama.com/library/qwen3.5). I found it to be better. DO suggest if you found something better.
+* I had to increase the context size of my Ollama. To do so Open ollama GUI Client **=>** `Go to Settings` **=>** Scroll to bottom and look for **`Context Length Settings`**.
+* Change it to your preference. I choose it to be 64K.
