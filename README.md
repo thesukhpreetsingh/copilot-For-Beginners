@@ -179,6 +179,16 @@ If needed, start Ollama from the system tray or launch it manually. like shared 
 * To search for different models and to search through them [Ollama](https://ollama.com/search?q=qwen)
 * Ollama Git hub repository = > [Ollama Github](https://github.com/ollama/ollama)
 * Youtube Tutorial to [Download Ollama and use a model with it](https://www.youtube.com/watch?v=z7fhyKBAfzE)
+* Few Other ways to run Models locally are as following ( Youtube link to - [
+How to Run LLMs Locally (Great For Learning and Privacy) ](https://www.youtube.com/watch?v=U8lGbSaCCYI) )
+```
+> LLAMA CPP (for local system and prototyping - CLI, 1to 5% Faster than OLLAMA.)
+> Ollama (for local system and prototyping -  Built on LLAMA CPP - very easy to use)
+> LLM Studio (for local system and prototyping- Built of LLAMA CPP - For comparing the models locally respect to your needs.)
+> VLLM (For scaling- Production level starts here)
+> SGLang (For scaling - production lebvel set up.)
+```
+
 
 
 ##### There can be multiple alternatives to both the models and Code helping tools and agents. Like we can use Copilot or Continue (Continue is the actual name) extension with VS Code or any other IDE.
