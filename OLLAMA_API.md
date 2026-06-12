@@ -1,15 +1,15 @@
 # Ollama API 
 ### Basic APIs that are exposed at localhost:11434 that you can use with your AI app.
 
-## https://docs.ollama.com/api/introduction
+### [Ollama API Reference](https://docs.ollama.com/api/introduction)
 
-## to Use Generate API
-'''
+## To Use Generate API
+```
 curl http://localhost:11434/api/generate -d '{
   "model": "gemma4",
   "prompt": "Why is the sky blue?"
 }'
-'''
+```
 
 
 ## To use embed API for embeddings
