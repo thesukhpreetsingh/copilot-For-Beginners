@@ -4,6 +4,7 @@
 ### [Ollama API Reference](https://docs.ollama.com/api/introduction)
 
 ## To Use Generate API
+### Generates a response for the provided prompt
 ```
 curl http://localhost:11434/api/generate -d '{
   "model": "gemma4",
@@ -13,6 +14,7 @@ curl http://localhost:11434/api/generate -d '{
 
 
 ## To use embed API for embeddings
+### Creates vector embeddings representing the input text
 
 ```
 curl http://localhost:11434/api/embed -d '{
@@ -22,6 +24,7 @@ curl http://localhost:11434/api/embed -d '{
 ```
 
 ## Generate a chat message
+### Generate the next chat message in a conversation between a user and an assistant.
 
 ```
 curl http://localhost:11434/api/chat -d '{
